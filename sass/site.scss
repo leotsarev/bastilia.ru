@@ -1,0 +1,39 @@
+.gamecard img {
+    width: 146px;
+    height: 146px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gamecard {
+    text-align: center;
+}
+
+.gamegrid, .peoplegrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+body, .sidebar {
+    background-image: url("/images/siteparts/texture_24.jpg")
+}
+
+.sidebar a {
+    color: black;
+}
+
+.container {
+    max-width:60rem;
+}
+
+@media (min-width: 48em) {
+  .chain {
+    position: fixed;
+    top: 0;
+    left: 18rem;
+    bottom: 0;
+    width: 11px;
+    text-align: left;
+    background-image: url("/images/siteparts/chain.gif")
+  }
+}

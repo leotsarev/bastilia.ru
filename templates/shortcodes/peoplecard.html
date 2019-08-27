@@ -1,0 +1,12 @@
+<div class="gamecard">
+    <img src="/images/avatars/{{avatar}}">
+    <p>
+        {% if uri %}
+            <a href="{{uri}}">
+                    {{name}}
+            </a>
+        {% else %}
+            {{name}}
+        {%endif %}
+    </p>
+</div>

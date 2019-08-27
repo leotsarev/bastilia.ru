@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://leotsarev.github.io/bastilia"
+base_url = "http://2.leotsar.cz8.ru/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -14,4 +14,10 @@ build_search_index = false
 theme = "hyde"
 
 [extra]
-# Put all your custom variables here
+
+hyde_links = [
+    {url = "/", name = "Игры"},
+    {url = "/about", name = "Мы"},
+    {url = "http://bastilia.ru/", name = "Старый сайт"},
+]
+

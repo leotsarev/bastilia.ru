@@ -1,0 +1,6 @@
+<div class="gamecard">
+    <img src="/images/games/{{id}}.png">
+    <p>
+      <a href="{% if uri %} {{uri}} {% elif year < 2010 %} /{{id}} {% else %} http://{{id}}.bastilia.ru/ {% endif %}">{{gamename}}</a> ({{year}})
+    </p>
+</div>

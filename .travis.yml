@@ -4,6 +4,7 @@ before_script:
   # Download and unzip the zola executable
   # Replace the version numbers in the URL by the version you want to use
   - curl -s -L https://github.com/getzola/zola/releases/download/v0.8.0/zola-v0.8.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar xvzf - -C /usr/local/bin
+  - sudo apt-get install -y lftp
 
 script:
   - zola build
@@ -14,4 +15,4 @@ after_success: |
   [ $TRAVIS_BRANCH = master ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
   zola build &&
-  ./deploy.sh
+  lftp -c "set ftps:initial-prot '';  open ftp://$FTP_USER:$FTP_PASS@$FTP_HOST:21; mirror -eRv public .; quit;"

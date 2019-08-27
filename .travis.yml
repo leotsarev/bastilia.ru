@@ -15,4 +15,4 @@ after_success: |
   [ $TRAVIS_BRANCH = master ] &&
   [ $TRAVIS_PULL_REQUEST = false ] &&
   zola build &&
-  lftp -c "set ftps:initial-prot '';  open ftp://$FTP_USER:$FTP_PASS@$FTP_HOST:21; mirror -eRv public .; quit;"
+  lftp -c "set ftps:initial-prot '';  open ftp://$FTP_USER:$FTP_PASS@$FTP_HOST:21; mirror -eRv public /home/leotsar/www/site2/public_html; quit;"
